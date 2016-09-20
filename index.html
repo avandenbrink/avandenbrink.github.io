@@ -1,16 +1,41 @@
 <DOCTYPE html>
 <html>
-
 <head>
-
-
-
+    <title>Portfolio Slider</title>
+    <base href="/photoDisplay/">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/portfolioSlider.css">
 </head>
-<body>
-    <h1>PhotoDisplay</h1>
-    <div>
+ 
+<body style="background:black">
+  <h1>Portfolio Slider</h1>
+  <div id="portfolio-slider">
+    <div id="displayContainer">
+    </div>       
+      <div id="thumbnails">
+        <img class="thumbnail" src="demo/images/EmmaA.jpg" data-original="demo/images/EmmaA.jpg">
+        <img class="thumbnail" src="demo/images/EmmaB.jpg" data-original="demo/images/EmmaB.jpg">
+        <img class="thumbnail" src="demo/images/EmmaC.jpg" data-original="demo/images/EmmaC.jpg">
+        <img class="thumbnail" src="demo/images/EmmaD.jpg" data-original="demo/images/EmmaD.jpg">
+        <img class="thumbnail" src="demo/images/EmmaE.jpg" data-original="demo/images/EmmaE.jpg">
+        <img class="thumbnail" src="demo/images/EmmaF.jpg" data-original="demo/images/EmmaF.jpg">
+        <img class="thumbnail" src="demo/images/EmmaG.jpg" data-original="demo/images/EmmaG.jpg">
+        <img class="thumbnail" src="demo/images/EmmaH.jpg" data-original="demo/images/EmmaH.jpg">
+        <img class="thumbnail" src="demo/images/EmmaI.jpg" data-original="demo/images/EmmaI.jpg">
+     </div>
+  </div>
+  
+  <script src="assets/javascript/jquery.js"></script>
+  <script src="javascript/portfolio.js"></script>
 
-
-    </div>
+  <script>
+    $(function() {
+      var slider = new PortfolioSlider({
+        thumbnailId: "thumbnails", // default "thumbnails"
+        ignoreCss: false, // optional
+      });
+    });
+  </script>
+    
 </body>
 </html>

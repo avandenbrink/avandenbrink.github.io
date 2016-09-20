@@ -1,0 +1,49 @@
+
+#displayContainer {
+	height: 600px;
+	width: 100%;
+	position: relative;
+}
+
+.feature-image {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:100%;
+}
+
+#thumbnails {
+  height: 170px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+}
+
+.thumbnail {
+  height: 95%;
+  transition: opacity 0.4s ease-in-out, height 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.thumbnail:hover {
+  height: 100%;
+}
+.thumbnail.viewed {
+  opacity: 0.4
+}
+
+.image-loader {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transition: right 0.2s ease-in-out
+}
+
+.image-loader.active {
+  right: 20px;
+}
