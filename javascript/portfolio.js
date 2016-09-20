@@ -39,12 +39,15 @@
     }
 
     PortfolioSlider.prototype.clickThumbnail = function(event) {
-      var display, img, loader, thumb, url;
+      var display, fileA, img, loader, thumb, url;
       thumb = event.target;
       url = thumb.dataset.original || thumb.src;
       if (url) {
-        if ($('.image-primary').length > 0 && $('.image-primary')[0].src === url) {
-          return;
+        if ($('.image-primary').length > 0) {
+          fileA = $('.image-primary')[0].src.split("/")[$('.image-primary')[0].src.split("/").length - 1];
+          if (fileA === url.split("/")[url.split("/").length - 1]) {
+            return;
+          }
         }
         loader = this.getLoader();
         img = document.createElement('img');

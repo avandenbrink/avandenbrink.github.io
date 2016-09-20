@@ -32,7 +32,9 @@ class @PortfolioSlider
     url = thumb.dataset.original || thumb.src
     if url
       # 2. Check if its the same as the last image clicked
-      return if $('.image-primary').length > 0 and $('.image-primary')[0].src == url
+      if $('.image-primary').length > 0
+        fileA = $('.image-primary')[0].src.split("/")[$('.image-primary')[0].src.split("/").length - 1]
+        return if fileA == url.split("/")[url.split("/").length - 1]
       
       # 3. Create and display loading spinner
       loader = this.getLoader()
