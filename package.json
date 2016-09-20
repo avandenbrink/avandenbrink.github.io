@@ -1,0 +1,22 @@
+{
+  "name": "portfolioslider",
+  "version": "1.0.0",
+  "description": "A beautiful Image Slider to display an array of images",
+  "main": "portfolio.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "coffee -o javascript/ -cw coffee/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://avandenbrink@github.com/avandenbrink/photoDisplay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avandenbrink/photoDisplay/issues"
+  },
+  "homepage": "https://github.com/avandenbrink/photoDisplay#readme"
+}
