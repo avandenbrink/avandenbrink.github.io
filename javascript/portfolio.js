@@ -52,6 +52,7 @@
         loader = this.getLoader();
         img = document.createElement('img');
         img.src = url;
+        img.style.visibility = 'hidden';
         $(thumb).addClass('viewed');
         display = document.getElementById(this.config.displayContainer);
         display.appendChild(img);
@@ -81,6 +82,9 @@
       totalWidth = incoming.width() + primary.width();
       leftSpacePrimary;
       leftSpaceIncoming;
+      incoming.css({
+        visibility: 'visible'
+      });
       if (totalWidth < window.innerWidth) {
         leftSpace = (window.innerWidth - totalWidth) / 2;
         leftSpacePrimary = leftSpace;

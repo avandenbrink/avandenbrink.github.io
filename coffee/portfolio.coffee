@@ -42,6 +42,7 @@ class @PortfolioSlider
       # 4. Create new image attribute
       img = document.createElement('img')
       img.src = url
+      img.style.visibility = 'hidden'
       # 5. Add 'clicked' styling to thumb
       $(thumb).addClass('viewed')
 
@@ -75,6 +76,7 @@ class @PortfolioSlider
     totalWidth = incoming.width() + primary.width()
     leftSpacePrimary
     leftSpaceIncoming
+    incoming.css({visibility: 'visible'}) # hiding it initailly to prevent a flash 
     
     # If 2 photos fit, then place them next to each other
     if totalWidth < window.innerWidth
